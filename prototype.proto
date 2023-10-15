@@ -1,0 +1,76 @@
+// Copyright 2015 gRPC authors.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+syntax = "proto3";
+package TDNSYSpkg;
+
+service TDNSYSservice {
+  rpc InitialIssue(InitalRequest) returns (InitalReplay) {}
+  rpc ValidateTDN (OneVarRequest) returns (TwoVarReply) {}
+  rpc RedeemTDN(OneVarRequest) returns (OneVarReply) {}
+  rpc SplitTDN (ThreeVarRequest) returns (FourVarReply) {}
+  rpc ConsolidateTDN (FourVarRequest) returns (ThreeVarReply) {}
+  rpc ReqestTDNOwnership (TwoVarRequest) returns (OneVarReply) {}
+  rpc SetTDNPin (ThreeVarRequest) returns (OneVarReply)  {}
+}
+
+message InitalRequest {
+	string amount = 1;
+	string pin = 2;
+	string cert = 3;
+	string note = 4;
+ }
+message InitalReplay {
+	string TDNsign = 1;
+	string ret = 2;
+ }
+
+message OneVarRequest {
+  string var = 1;
+}
+
+message OneVarReply {
+  string var = 1;
+}
+
+message TwoVarRequest{
+  string var1 = 1;
+  string var2 = 2;
+}
+message TwoVarReply{
+  string var1 = 1;
+  string var2 = 2;
+}
+message ThreeVarRequest {
+  string var1 = 1;
+  string var2 = 2;
+  string var3 = 3;
+}
+message ThreeVarReply {
+  string var1 = 1;
+  string var2 = 2;
+  string var3 = 3;
+}
+message FourVarRequest {
+  string var1 = 1;
+  string var2  = 2;
+  string var3 = 3;
+  string var4  = 4;
+}
+message FourVarReply {
+  string var1 = 1;
+  string var2  = 2;
+  string var3 = 3;
+  string var4  = 4;
+}
