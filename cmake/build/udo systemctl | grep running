@@ -1,0 +1,142 @@
+[0;4mUNIT FILE                             [0m[0;4m STATE          [0m[0;4m VENDOR PRESET[0m
+apache-htcacheclean.service            [0;1;31mdisabled       [0m [0;1;32menabled      [0m
+apache-htcacheclean@.service           [0;1;31mdisabled       [0m [0;1;32menabled      [0m
+apache2.service                        [0;1;32menabled        [0m [0;1;32menabled      [0m
+apache2@.service                       [0;1;31mdisabled       [0m [0;1;32menabled      [0m
+apt-daily-upgrade.service              static          [0;1;32menabled      [0m
+apt-daily.service                      static          [0;1;32menabled      [0m
+autovt@.service                        indirect        [0;1;32menabled      [0m
+bind9.service                          generated       [0;1;32menabled      [0m
+console-getty.service                  enabled-runtime [0;1;31mdisabled     [0m
+console-setup.service                  [0;1;32menabled        [0m [0;1;32menabled      [0m
+container-getty@.service               static          [0;1;32menabled      [0m
+cron.service                           [0;1;32menabled        [0m [0;1;32menabled      [0m
+cryptdisks-early.service               [0;1;31mmasked         [0m [0;1;32menabled      [0m
+cryptdisks.service                     [0;1;31mmasked         [0m [0;1;32menabled      [0m
+dbus-org.freedesktop.hostname1.service static          [0;1;32menabled      [0m
+dbus-org.freedesktop.locale1.service   static          [0;1;32menabled      [0m
+dbus-org.freedesktop.login1.service    static          [0;1;32menabled      [0m
+dbus-org.freedesktop.network1.service  [0;1;32menabled        [0m [0;1;32menabled      [0m
+dbus-org.freedesktop.resolve1.service  [0;1;32menabled        [0m [0;1;32menabled      [0m
+dbus-org.freedesktop.timedate1.service static          [0;1;32menabled      [0m
+dbus-org.freedesktop.timesync1.service [0;1;32menabled        [0m [0;1;32menabled      [0m
+dbus.service                           static          [0;1;32menabled      [0m
+debug-shell.service                    [0;1;31mdisabled       [0m [0;1;31mdisabled     [0m
+dmesg.service                          [0;1;32menabled        [0m [0;1;32menabled      [0m
+emergency.service                      static          [0;1;32menabled      [0m
+exim4-base.service                     static          [0;1;32menabled      [0m
+exim4.service                          generated       [0;1;32menabled      [0m
+fetchmail.service                      generated       [0;1;32menabled      [0m
+fstrim.service                         static          [0;1;32menabled      [0m
+getty-static.service                   static          [0;1;32menabled      [0m
+getty@.service                         indirect        [0;1;32menabled      [0m
+hwclock.service                        [0;1;31mmasked         [0m [0;1;32menabled      [0m
+ifup@.service                          static          [0;1;32menabled      [0m
+ifupdown-pre.service                   static          [0;1;32menabled      [0m
+ifupdown-wait-online.service           [0;1;32menabled        [0m [0;1;32menabled      [0m
+inetd.service                          generated       [0;1;32menabled      [0m
+initrd-cleanup.service                 static          [0;1;32menabled      [0m
+initrd-parse-etc.service               static          [0;1;32menabled      [0m
+initrd-switch-root.service             static          [0;1;32menabled      [0m
+initrd-udevadm-cleanup-db.service      static          [0;1;32menabled      [0m
+keyboard-setup.service                 [0;1;32menabled        [0m [0;1;32menabled      [0m
+kmod-static-nodes.service              static          [0;1;32menabled      [0m
+kmod.service                           static          [0;1;32menabled      [0m
+logrotate.service                      static          [0;1;32menabled      [0m
+man-db.service                         static          [0;1;32menabled      [0m
+modprobe@.service                      static          [0;1;32menabled      [0m
+modules_dep.service                    generated       [0;1;32menabled      [0m
+motd-news.service                      static          [0;1;32menabled      [0m
+mysql.service                          [0;1;32menabled        [0m [0;1;32menabled      [0m
+named-resolvconf.service               [0;1;31mdisabled       [0m [0;1;32menabled      [0m
+named.service                          [0;1;31mdisabled       [0m [0;1;32menabled      [0m
+networking.service                     [0;1;32menabled        [0m [0;1;32menabled      [0m
+ondemand.service                       [0;1;31mdisabled       [0m [0;1;32menabled      [0m
+portmap.service                        [0;1;32menabled        [0m [0;1;32menabled      [0m
+procps.service                         static          [0;1;32menabled      [0m
+quota.service                          [0;1;31mdisabled       [0m [0;1;32menabled      [0m
+quotaon.service                        static          [0;1;32menabled      [0m
+quotarpc.service                       [0;1;31mdisabled       [0m [0;1;32menabled      [0m
+rc-local.service                       enabled-runtime [0;1;32menabled      [0m
+rc.service                             [0;1;31mmasked         [0m [0;1;32menabled      [0m
+rcS.service                            [0;1;31mmasked         [0m [0;1;32menabled      [0m
+rescue.service                         static          [0;1;32menabled      [0m
+rpcbind.service                        [0;1;32menabled        [0m [0;1;32menabled      [0m
+rsync.service                          [0;1;31mdisabled       [0m [0;1;32menabled      [0m
+rsyslog.service                        [0;1;32menabled        [0m [0;1;32menabled      [0m
+saslauthd.service                      generated       [0;1;32menabled      [0m
+screen-cleanup.service                 [0;1;31mmasked         [0m [0;1;32menabled      [0m
+serial-getty@.service                  [0;1;31mdisabled       [0m [0;1;32menabled      [0m
+setvtrgb.service                       [0;1;31mdisabled       [0m [0;1;32menabled      [0m
+ssh.service                            [0;1;32menabled        [0m [0;1;32menabled      [0m
+ssh@.service                           static          [0;1;32menabled      [0m
+sshd.service                           [0;1;32menabled        [0m [0;1;32menabled      [0m
+sudo.service                           [0;1;31mmasked         [0m [0;1;32menabled      [0m
+syslog.service                         [0;1;32menabled        [0m [0;1;32menabled      [0m
+system-update-cleanup.service          static          [0;1;32menabled      [0m
+systemd-ask-password-console.service   static          [0;1;32menabled      [0m
+systemd-ask-password-wall.service      static          [0;1;32menabled      [0m
+systemd-backlight@.service             static          [0;1;32menabled      [0m
+systemd-binfmt.service                 static          [0;1;32menabled      [0m
+systemd-bless-boot.service             static          [0;1;32menabled      [0m
+systemd-boot-check-no-failures.service [0;1;32menabled        [0m [0;1;32menabled      [0m
+systemd-boot-system-token.service      static          [0;1;32menabled      [0m
+systemd-exit.service                   static          [0;1;32menabled      [0m
+systemd-fsck-root.service              static          [0;1;32menabled      [0m
+systemd-fsck@.service                  static          [0;1;32menabled      [0m
+systemd-fsckd.service                  static          [0;1;32menabled      [0m
+systemd-halt.service                   static          [0;1;32menabled      [0m
+systemd-hibernate-resume@.service      static          [0;1;32menabled      [0m
+systemd-hibernate.service              static          [0;1;32menabled      [0m
+systemd-hostnamed.service              static          [0;1;32menabled      [0m
+systemd-hwdb-update.service            static          [0;1;32menabled      [0m
+systemd-hybrid-sleep.service           static          [0;1;32menabled      [0m
+systemd-initctl.service                static          [0;1;32menabled      [0m
+systemd-journal-flush.service          static          [0;1;32menabled      [0m
+systemd-journald.service               static          [0;1;32menabled      [0m
+systemd-journald@.service              static          [0;1;32menabled      [0m
+systemd-kexec.service                  static          [0;1;32menabled      [0m
+systemd-localed.service                static          [0;1;32menabled      [0m
+systemd-logind.service                 static          [0;1;32menabled      [0m
+systemd-machine-id-commit.service      static          [0;1;32menabled      [0m
+systemd-modules-load.service           static          [0;1;32menabled      [0m
+systemd-network-generator.service      [0;1;32menabled        [0m [0;1;32menabled      [0m
+systemd-networkd-wait-online.service   [0;1;32menabled        [0m [0;1;32menabled      [0m
+systemd-networkd.service               [0;1;32menabled        [0m [0;1;32menabled      [0m
+systemd-poweroff.service               static          [0;1;32menabled      [0m
+systemd-pstore.service                 [0;1;32menabled        [0m [0;1;32menabled      [0m
+systemd-quotacheck.service             static          [0;1;32menabled      [0m
+systemd-random-seed.service            static          [0;1;32menabled      [0m
+systemd-reboot.service                 static          [0;1;32menabled      [0m
+systemd-remount-fs.service             enabled-runtime [0;1;32menabled      [0m
+systemd-resolved.service               [0;1;32menabled        [0m [0;1;32menabled      [0m
+systemd-rfkill.service                 static          [0;1;32menabled      [0m
+systemd-suspend-then-hibernate.service static          [0;1;32menabled      [0m
+systemd-suspend.service                static          [0;1;32menabled      [0m
+systemd-sysctl.service                 static          [0;1;32menabled      [0m
+systemd-sysusers.service               static          [0;1;32menabled      [0m
+systemd-time-wait-sync.service         [0;1;32menabled        [0m [0;1;32menabled      [0m
+systemd-timedated.service              static          [0;1;32menabled      [0m
+systemd-timesyncd.service              [0;1;32menabled        [0m [0;1;32menabled      [0m
+systemd-tmpfiles-clean.service         static          [0;1;32menabled      [0m
+systemd-tmpfiles-setup-dev.service     static          [0;1;32menabled      [0m
+systemd-tmpfiles-setup.service         static          [0;1;32menabled      [0m
+systemd-udev-settle.service            static          [0;1;32menabled      [0m
+systemd-udev-trigger.service           static          [0;1;32menabled      [0m
+systemd-udevd.service                  static          [0;1;32menabled      [0m
+systemd-update-utmp-runlevel.service   static          [0;1;32menabled      [0m
+systemd-update-utmp.service            static          [0;1;32menabled      [0m
+systemd-user-sessions.service          static          [0;1;32menabled      [0m
+systemd-volatile-root.service          static          [0;1;32menabled      [0m
+udev.service                           static          [0;1;32menabled      [0m
+ufw.service                            [0;1;32menabled        [0m [0;1;32menabled      [0m
+user-runtime-dir@.service              static          [0;1;32menabled      [0m
+user@.service                          static          [0;1;32menabled      [0m
+uuidd.service                          indirect        [0;1;32menabled      [0m
+vsftpd.service                         [0;1;32menabled        [0m [0;1;32menabled      [0m
+vzfifo.service                         [0;1;32menabled        [0m [0;1;32menabled      [0m
+wide-dhcpv6-client.service             generated       [0;1;32menabled      [0m
+x11-common.service                     [0;1;31mmasked         [0m [0;1;32menabled      [0m
+xinetd.service                         generated       [0;1;32menabled      [0m
+
+139 unit files listed.

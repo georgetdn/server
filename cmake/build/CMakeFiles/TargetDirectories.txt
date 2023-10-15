@@ -1,0 +1,4 @@
+/home/georged/grpc/examples/cpp/prototype/cmake/build/CMakeFiles/edit_cache.dir
+/home/georged/grpc/examples/cpp/prototype/cmake/build/CMakeFiles/server.dir
+/home/georged/grpc/examples/cpp/prototype/cmake/build/CMakeFiles/rebuild_cache.dir
+/home/georged/grpc/examples/cpp/prototype/cmake/build/CMakeFiles/hw_grpc_proto.dir
