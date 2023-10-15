@@ -1,4 +1,4 @@
-// repository.cpp : Defines the functions for the static library.
+// dbtrans.cpp : Defines the access to database.
 //
 #include <iostream>
 #include <mysql.h>
