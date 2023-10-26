@@ -46,7 +46,7 @@ std::string InsertTDNDB(MYSQL *  con,
 		return mysql_error(con);
 	}
 	// debit TDNSYS Co account
-	const std::string qq =  "INSERT INTO `TDNSYS`.`tdnsysco` (debit`,`transactionNo`) VALUES ('"+ amount +"','"+trId+"') ";
+	const std::string qq =  "INSERT INTO `TDNSYS`.`tdnsysco` (`debit`,`transactionNo`) VALUES ('"+ amount +"','"+trId+"') ";
     TRACE("\nQuery  %s\n", qq.c_str()) ;
 	if (mysql_query(con, qq.c_str()))
 	{
