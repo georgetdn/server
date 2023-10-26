@@ -45,9 +45,9 @@ std::string InsertTDNDB(MYSQL *  con,
 		TRACE("DB Error %s\n", mysql_error(con)) ;
 		return mysql_error(con);
 	}
-/*	// debit TDNSYS Co account
+	// debit TDNSYS Co account
 	const std::string qq =  "INSERT INTO `TDNSYS`.`tdnsysco` (`tdnid`,`debit`,`transactionNo`) VALUES ('"+ TDNsgn.substr(0, 20) +"','"+ amount +"','"+trId+"') ";
- //   TRACE("\nQuery  %s\n", qq.c_str()) ;
+    TRACE("\nQuery  %s\n", qq.c_str()) ;
 	if (mysql_query(con, qq.c_str()))
 	{
 		TRACE("DB Error %s\n", mysql_error(con)) ;
@@ -55,13 +55,13 @@ std::string InsertTDNDB(MYSQL *  con,
 	}
 	// Debit bank TDN inventory account
 	const std::string qqq =  "INSERT INTO `TDNSYS`.`bankinventory` (`tdnid`,`tdn_signature`,`debit`,`transactionNo`) VALUES ('"+ TDNsgn.substr(0, 20) +"','"+ TDNsgn +"','"+ amount +"','"+trId+"') ";
- //   TRACE("\nQuery  %s\n", qqq.c_str()) ;
+    TRACE("\nQuery  %s\n", qqq.c_str()) ;
 	if (mysql_query(con, qqq.c_str()))
 	{
 		TRACE("DB Error %s\n", mysql_error(con)) ;
 		return mysql_error(con);
 	}	
-*/	TRACE ("Exit InsertTDNDB%s", "\n");
+	TRACE ("Exit InsertTDNDB%s", "\n");
 
   	return "OK";
 }
