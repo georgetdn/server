@@ -76,7 +76,7 @@ std::string UpdateBankAcc(MYSQL *  con,
 	if (trType == std::to_string(INITIAL_ISSUE))
 	{
 		TRACE ("Debiting TDNSYS Co account%s", "\n");
-		const std::string qq =  "INSERT INTO `TDNSYS`.`tdnsysco` (`tdnid`,`debit`,`transactionNo`) VALUES ('"+ TDNsgn.substr(0, 20) +"','"+ amount +"','"+trId+"') ";
+		const std::string qq =  "INSERT INTO `TDNSYS`.`tdnsysco` (`debit`,`transactionNo`) VALUES ('"+ amount +"','"+trId+"') ";
 		//   TRACE("\nQuery  %s\n", qq.c_str()) ;
 		if (mysql_query(con, qq.c_str()))
 		{
@@ -84,7 +84,7 @@ std::string UpdateBankAcc(MYSQL *  con,
 			return mysql_error(con);
 		}
 		TRACE ("Debiting bank TDN inventory account%s", "\n");
-		const std::string qqq =  "INSERT INTO `TDNSYS`.`bankinventory` (`tdnid`,`tdn_signature`,`debit`,`transactionNo`) VALUES ('"+ TDNsgn.substr(0, 20) +"','"+ TDNsgn +"','"+ amount +"','"+trId+"') ";
+		const std::string qqq =  "INSERT INTO `TDNSYS`.`bankinventory` (`tdn_signature`,`debit`,`transactionNo`) VALUES ('"+ TDNsgn +"','"+ amount +"','"+trId+"') ";
 		//   TRACE("\nQuery  %s\n", qqq.c_str()) ;
 		if (mysql_query(con, qqq.c_str()))
 		{
