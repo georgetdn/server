@@ -46,7 +46,7 @@ std::string InsertTDNDB(MYSQL *  con,
 		return mysql_error(con);
 	}
 	// debit TDNSYS Co account
-	const std::string qq =  "INSERT INTO `TDNSYS`.`tdnsysco` (debit`,`transactionNo`) VALUES ("+ amount +"','"+trId+"') ";
+	const std::string qq =  "INSERT INTO `TDNSYS`.`tdnsysco` (debit`,`transactionNo`) VALUES ('"+ amount +"','"+trId+"') ";
     TRACE("\nQuery  %s\n", qq.c_str()) ;
 	if (mysql_query(con, qq.c_str()))
 	{
@@ -54,7 +54,7 @@ std::string InsertTDNDB(MYSQL *  con,
 		return mysql_error(con);
 	}
 	// Debit bank TDN inventory account
-	const std::string qqq =  "INSERT INTO `TDNSYS`.`bankinventory` (`tdn_signature`,`debit`,`transactionNo`) VALUES ('"+ TDNsgn.substr(0, 20) +"','"+ TDNsgn +"','"+ amount +"','"+trId+"') ";
+	const std::string qqq =  "INSERT INTO `TDNSYS`.`bankinventory` (`tdn_signature`,`debit`,`transactionNo`) VALUES ('"+ TDNsgn +"','"+ amount +"','"+trId+"') ";
     TRACE("\nQuery  %s\n", qqq.c_str()) ;
 	if (mysql_query(con, qqq.c_str()))
 	{
