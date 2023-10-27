@@ -2,6 +2,7 @@
 
 std::string InsertTDNDB( MYSQL *  con,  
 											const std::string trId, 
+											const std::string  trType,
 											std::string& TDNsgn, 
 											std::string amount, 
 											std::string  pin, 
@@ -9,9 +10,9 @@ std::string InsertTDNDB( MYSQL *  con,
 											std::string note);
 std::string UpdateBankAcc(MYSQL *  con,
 			const std::string trId,
+			const std::string  trType,  // debit or credit
 			std::string& TDNsgn,
-			std::string debitAmt,
-			std::string creditAmt,
+			std::string amount,
 			std::string note);
 std::string GetTDNdata( MYSQL *   con,  
 											std::string & TDNsgn, 
@@ -21,6 +22,7 @@ std::string GetTDNdata( MYSQL *   con,
 											std::string& cert);
 std::string CancelTDN( MYSQL *  con,  
 										const std::string trId, 
+										const std::string  trType,
 										std::string & TDNsgn);											
 std::string UpdateTDN( MYSQL * con,  
 										std::string & TDNsgn,
