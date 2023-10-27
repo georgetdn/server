@@ -10,7 +10,6 @@ std::string InsertTDNDB( MYSQL *  con,
 											std::string note);
 std::string UpdateBankAcc(MYSQL *  con,
 			const std::string trId,
-			const std::string  trType,  // debit or credit
 			std::string& TDNsgn,
 			std::string debitAmt,
 			std::string creditAmt,
