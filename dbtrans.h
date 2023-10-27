@@ -2,7 +2,6 @@
 
 std::string InsertTDNDB( MYSQL *  con,  
 											const std::string trId, 
-											const std::string  trType,
 											std::string& TDNsgn, 
 											std::string amount, 
 											std::string  pin, 
@@ -22,7 +21,6 @@ std::string GetTDNdata( MYSQL *   con,
 											std::string& cert);
 std::string CancelTDN( MYSQL *  con,  
 										const std::string trId, 
-										const std::string  trType,
 										std::string & TDNsgn);											
 std::string UpdateTDN( MYSQL * con,  
 										std::string & TDNsgn,
