@@ -50,7 +50,7 @@ std::string  InitialIssueDB(std::string& TDNsgn, std::string  amount, std::strin
 	}
 	/////
 	
-	UpdateBankAcc(con, trId, trType, TDNsgn, amount,"0", note);
+	UpdateBankAcc(con, trId, TDNsgn, amount,"0", note);
 	
 	ReleaseConnection( con);
 	TRACE("Exit Repository  InitialIssueDB.  %s", "\n");
