@@ -54,14 +54,13 @@ std::string UpdateBankAcc(MYSQL *  con,
 			const std::string trId,
 			const std::string  trType,  // debit or credit
 			std::string& TDNsgn,
-			std::string debitAmt,
-			std::string creditAmt,
+			std::string amount,
 			std::string note)
 {
 	if (trType == std::to_string(INITIAL_ISSUE))
 	{
 		TRACE ("Debiting TDNSYS Co account%s", "\n");
-		const std::string qq =  "INSERT INTO `TDNSYS`.`tdnsysco` (`debit`,`credit`,`transactionNo`) VALUES ('"+ degitAmt +"','"+creditAmt"','"+trId+"') ";
+		const std::string qq =  "INSERT INTO `TDNSYS`.`tdnsysco` (`tdnid`,`debit`,`transactionNo`) VALUES ('"+ TDNsgn.substr(0, 20) +"','"+ amount +"','"+trId+"') ";
 		//   TRACE("\nQuery  %s\n", qq.c_str()) ;
 		if (mysql_query(con, qq.c_str()))
 		{
@@ -69,7 +68,7 @@ std::string UpdateBankAcc(MYSQL *  con,
 			return mysql_error(con);
 		}
 		TRACE ("Debiting bank TDN inventory account%s", "\n");
-		const std::string qqq =  "INSERT INTO `TDNSYS`.`bankinventory` (`tdn_signature`,`debit`,`transactionNo`) VALUES ('"+ TDNsgn +"','"+ debitAmt +"','"+creditAmt"','"+trId+"') ";
+		const std::string qqq =  "INSERT INTO `TDNSYS`.`bankinventory` (`tdnid`,`tdn_signature`,`debit`,`transactionNo`) VALUES ('"+ TDNsgn.substr(0, 20) +"','"+ TDNsgn +"','"+ amount +"','"+trId+"') ";
 		//   TRACE("\nQuery  %s\n", qqq.c_str()) ;
 		if (mysql_query(con, qqq.c_str()))
 		{
@@ -418,7 +417,7 @@ int GetNewTDNsgn( std::string amount, std::string& TDNsgn)
     return 0;
 
 }
-//////////////////////////////////////////////////////////////////////////
+
 std::string GetTransId(MYSQL *con, std::string& trId)
 {
     if (mysql_query(con, "UPDATE  `transactId`  SET id=LAST_INSERT_ID(id+1);"))
@@ -449,7 +448,6 @@ std::string GetTransId(MYSQL *con, std::string& trId)
     return "OK";
 
 }
-//////////////////////////////////////////////////////////////////////////
 static  MYSQL *con = NULL;
 MYSQL * GetConnection (void)
 {
@@ -469,7 +467,6 @@ MYSQL * GetConnection (void)
 	return con;
 
 }
-//////////////////////////////////////////////////////////////////////////
 void ReleaseConnection( MYSQL *  con)
 {
 	TRACE ("Enter ReleaseConnection%s", "\n");
