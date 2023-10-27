@@ -153,7 +153,7 @@ std::string  SplitTDNdb(std::string& TDNsgn1, std::string& amount1, std::string&
 	}
 	/////
 
-	if (pinTmp != pin)
+	if (pin && pinTmp != pin)
 	{
 		TRACE("Invalid PIN %s", "\n");
 		ReleaseConnection( con);
