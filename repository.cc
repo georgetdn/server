@@ -40,8 +40,9 @@ std::string  InitialIssueDB(std::string& TDNsgn, std::string  amount, std::strin
 		return ret;
 	}
 
-    	/////
-	ret = InsertTDNDB(con, trId, TDNsgn, amount,   pin,   cert, note);
+    std::string  trType = std::to_string(INITIAL_ISSUE);
+	/////
+	ret = InsertTDNDB(con, trId, trType, TDNsgn, amount,   pin,   cert, note);
 	if (ret != "OK")
 	{
 		ReleaseConnection( con);
@@ -50,7 +51,7 @@ std::string  InitialIssueDB(std::string& TDNsgn, std::string  amount, std::strin
 	}
 	/////
 	
-	UpdateBankAcc(con, trId, TDNsgn, amount,"0", note);
+	UpdateBankAcc(con, trId, trType, TDNsgn, amount, note);
 	
 	ReleaseConnection( con);
 	TRACE("Exit Repository  InitialIssueDB.  %s", "\n");
@@ -71,10 +72,12 @@ std::string  RedeemTDNdb(std::string& TDNsgn)
 	if(ret != "OK")
 	{
 		ReleaseConnection( con);
-		TRACE("Error  Repository  RedeemTDNdb.  %s\n", ret.c_str());
+		TRACE("Error  Repository  InitialIssueDB.  %s\n", ret.c_str());
 		return ret;
 	}
 
+    std::string  trType = std::to_string(REDEMPTION);
+	/////
 	ret = CancelTDN( con, trId,  trType, TDNsgn);
 	if (ret != "OK")
 	{
@@ -84,7 +87,7 @@ std::string  RedeemTDNdb(std::string& TDNsgn)
 	/////
 	std::string  note;
 	std::string amount = TDNsgn.substr(TDNSING_LEN - AMOUNT_LEN);
-	UpdateBankAcc(con, trId, TDNsgn, "0", amount, note);
+	UpdateBankAcc(con, trId, trType, TDNsgn, amount, note);
 	
 	ReleaseConnection( con);
 
