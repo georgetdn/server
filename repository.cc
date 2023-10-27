@@ -71,7 +71,7 @@ std::string  RedeemTDNdb(std::string& TDNsgn)
 	if(ret != "OK")
 	{
 		ReleaseConnection( con);
-		TRACE("Error  Repository  InitialIssueDB.  %s\n", ret.c_str());
+		TRACE("Error  Repository  RedeemTDNdb.  %s\n", ret.c_str());
 		return ret;
 	}
 
